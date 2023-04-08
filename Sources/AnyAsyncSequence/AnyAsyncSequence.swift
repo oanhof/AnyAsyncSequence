@@ -2,7 +2,7 @@
 //  AnyAsyncSequence.swift
 //
 //
-//  Created by Dominik Arnhof on 03.04.23.
+//  Created by oanhof on 03.04.23.
 //
 
 import Foundation
@@ -48,11 +48,11 @@ public struct AnyAsyncThrowingSequence<Element>: AsyncSequence {
 }
 
 extension AsyncSequence {
-    func eraseToAnyAsyncSequence() -> AnyAsyncSequence<Element> {
+    public func eraseToAnyAsyncSequence() -> AnyAsyncSequence<Element> {
         AnyAsyncSequence(sequence: self)
     }
     
-    func eraseToAnyAsyncThrowingSequence() -> AnyAsyncThrowingSequence<Element> {
+    public func eraseToAnyAsyncThrowingSequence() -> AnyAsyncThrowingSequence<Element> {
         AnyAsyncThrowingSequence(sequence: self)
     }
 }

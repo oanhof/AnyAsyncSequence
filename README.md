@@ -1,3 +1,3 @@
 # AnyAsyncSequence
 
-A description of this package.
+Type erased AsyncSequence for Swift.
